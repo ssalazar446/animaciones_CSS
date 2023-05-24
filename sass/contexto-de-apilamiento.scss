@@ -1,3 +1,9 @@
+$dark-brown: #a54a38;
+$light-brown: #bf624c;
+$dark-green: #51af5e;
+$light-green: #51af5e;
+$shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
 body{
     margin: 0;  
     height: 100vh;
@@ -16,13 +22,11 @@ body{
 }
 .layer{
     &-1{
-        background: palegoldenrod;
         bottom: 0;
         height: 450px;
         position: absolute;
         right: 60px;
         width: 80px;
-        z-index: 1;
         .left-ear--outer {
             background: white;
             border-radius: 90%;
@@ -67,7 +71,7 @@ body{
             position: absolute;
             top: 30px;
             width: 100%;
-            .head__eye{
+            &__eye{
                 background: gray;
                 border-radius: 50%;
                 width: 4px;
@@ -84,62 +88,298 @@ body{
         }
     }
     &-2{
-        background: white;
         bottom: 0;
         height: 450px;
         position: absolute;
         left: 60px;
         width: 80px;
         z-index: 2;
+        animation-name: layer;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        .left-ear--outer{
+            background: white;
+            border-radius: 90%;
+            top: 0;
+            height: 50px;
+            left: 10px;
+            position: absolute;
+            width: 20px;
+        }
+        .left-ear--inner{
+            background: pink;
+            border-radius: 90%;
+            top: 8px;
+            height: 50px;
+            left: 15px;
+            position: absolute;
+            width: 10px;
+        }
+        .right-ear--outer{
+            background: white;
+            border-radius: 90%;
+            top: 0;
+            height: 50px;
+            right: 10px;
+            position: absolute;
+            width: 20px;
+        }
+        .right-ear--inner{
+            background: pink;
+            border-radius: 90%;
+            top: 8px;
+            height: 50px;
+            right: 15px;
+            position: absolute;
+            width: 10px;
+        }
+        .head{
+            background: white;
+            border-radius: 50%;
+            height: 80px;
+            left: 0;
+            margin: 0 auto;
+            position: absolute;
+            right: 0;
+            top: 30px;
+            width: 100%;
+            &__eye{
+                background-color: gray;
+                border-radius: 50%;
+                height: 4px;
+                position: absolute;
+                top: 15px;
+                width: 4px;
+                animation-name: blink;
+                &--left{
+                    left: 31px;
+                }
+                &--right{
+                    right: 31px;
+                }
+            }
+        }
     }
     &-3{
-        background: pink;
+        background: $light-brown;
+        border-radius: 20px;
+        box-shadow: $shadow;
         bottom: 0;
         height: 400px;
         left: 0;
         margin: 0 auto;
+        overflow: hidden;
         position: absolute;
         right: 0;
         width: 220px;
         z-index: 3;
+        .lawn{
+            background: $dark-green;
+            height: 20px;
+            width: 100%;
+        }
+        .land{
+            background: linear-gradient(135deg, $dark-green 25%, transparent 25%) -50px 0, linear-gradient(-135deg, $dark-green 25%, transparent 25%) -50px 0, linear-gradient(45deg, $light-brown 25%, transparent 25%), linear-gradient(-45deg, transparent 25%, $dark-brown 25%);
+            background-size: 33px 30px;
+            height: 30px;
+            width: 100%;
+        }
     }
     &-4{
-        background: white;
         bottom: 0;
         height: 350px;
         left: 15px;
         position: absolute;
         width: 80px;
         z-index: 4;
+        animation-name: layer;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        .left-ear--outer{
+            background: white;
+            border-radius: 90%;
+            top: 0;
+            height: 50px;
+            left: 10px;
+            position: absolute;
+            width: 20px;
+        }
+        .left-ear--inner{
+            background: pink;
+            border-radius: 90%;
+            top: 8px;
+            height: 50px;
+            left: 15px;
+            position: absolute;
+            width: 10px;
+        }
+        .right-ear--outer{
+            background: white;
+            border-radius: 90%;
+            top: 0;
+            height: 50px;
+            right: 10px;
+            position: absolute;
+            width: 20px;
+        }
+        .right-ear--inner{
+            background: pink;
+            border-radius: 90%;
+            top: 8px;
+            height: 50px;
+            right: 15px;
+            position: absolute;
+            width: 10px;
+        }
+        .head{
+            background: white;
+            border-radius: 50%;
+            height: 80px;
+            left: 0;
+            margin: 0 auto;
+            position: absolute;
+            right: 0;
+            top: 30px;
+            width: 100%;
+            &__eye{
+                background-color: gray;
+                border-radius: 50%;
+                height: 4px;
+                position: absolute;
+                top: 15px;
+                width: 4px;
+                animation-name: blink;
+                &--left{
+                    left: 31px;
+                }
+                &--right{
+                    right: 31px;
+                }
+            }
+        }
     }
     &-5{
-        background: papayawhip;
+        background: $light-brown;
+        border-radius: 20px;
+        box-shadow: var(--shadow);
         bottom: 0;
         height: 300px;
+        overflow: hidden;
         position: absolute;
         width: 200px;
         z-index: 5;
+        .lawn{
+            background: $dark-green;
+            height: 20px;
+            width: 100%;
+        }
+        .land{
+            background: linear-gradient(135deg, $dark-green 25%, transparent 25%) -50px 0, linear-gradient(-135deg, $dark-green 25%, transparent 25%) -50px 0, linear-gradient(45deg, $light-brown 25%, transparent 25%), linear-gradient(-45deg, transparent 25%, $dark-brown 25%);
+            background-size: 33px 30px;
+            height: 30px;
+            width: 100%;
+        }
     }
     &-6{
-        background: white;
         bottom: 0;
         height: 250px;
         position: absolute;
         right: 30px;
         width: 80px;
         z-index: 6;
+        animation-name: layer;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        .left-ear--outer{
+            background: white;
+            border-radius: 90%;
+            top: 0;
+            height: 50px;
+            left: 10px;
+            position: absolute;
+            width: 20px;
+        }
+        .left-ear--inner{
+            background: pink;
+            border-radius: 90%;
+            top: 8px;
+            height: 50px;
+            left: 15px;
+            position: absolute;
+            width: 10px;
+        }
+        .right-ear--outer{
+            background: white;
+            border-radius: 90%;
+            top: 0;
+            height: 50px;
+            right: 10px;
+            position: absolute;
+            width: 20px;
+        }
+        .right-ear--inner{
+            background: pink;
+            border-radius: 90%;
+            top: 8px;
+            height: 50px;
+            right: 15px;
+            position: absolute;
+            width: 10px;
+        }
+        .head{
+            background: white;
+            border-radius: 50%;
+            height: 80px;
+            left: 0;
+            margin: 0 auto;
+            position: absolute;
+            right: 0;
+            top: 30px;
+            width: 100%;
+            &__eye{
+                background-color: gray;
+                border-radius: 50%;
+                height: 4px;
+                position: absolute;
+                top: 15px;
+                width: 4px;
+                animation-name: blink;
+                &--left{
+                    left: 31px;
+                }
+                &--right{
+                    right: 31px;
+                }
+            }
+        }
     }
     &-7{
-        background: pink;
+        background: $light-brown;
+        border-radius: 20px;
+        box-shadow: $shadow;
         bottom: 0;
         height: 200px;
+        overflow: hidden;
         position: absolute;
         right: 0;
         width: 150px;
         z-index: 7;
+        .lawn{
+            background: $dark-green;
+            height: 20px;
+            width: 100%;
+        }
+        .land{
+            background: linear-gradient(135deg, $dark-green 25%, transparent 25%) -50px 0, linear-gradient(-135deg, $dark-green 25%, transparent 25%) -50px 0, linear-gradient(45deg, $light-brown 25%, transparent 25%), linear-gradient(-45deg, transparent 25%, $dark-brown 25%);
+            background-size: 33px 30px;
+            height: 30px;
+            width: 100%;
+        }
     }
     &-8{
-        background: papayawhip;
         bottom: 0;
         height: 120px;
         left: 0;
@@ -148,22 +388,88 @@ body{
         right: 0;
         width: 200px;
         z-index: 8;
+        &__left-lawn{
+            background: $dark-green;
+            border-radius: 40px 40px 0 0;
+            bottom: 0;
+            display: inline-block;
+            height: 70%;
+            left: 0;
+            position: absolute;
+            width: 80px;
+        }
+        &__center-lawn{
+            background: $dark-green;
+            border-radius: 40px 40px 0 0;
+            bottom: 0;
+            display: inline-block;
+            height: 100%;
+            left: 60px;
+            position: absolute;
+            width: 80px;
+        }
+        &__right-lawn{
+            background: $dark-green;
+            border-radius: 40px 40px 0 0;
+            bottom: 0;
+            display: inline-block;
+            height: 80%;
+            left: 130px;
+            position: absolute;
+            width: 80px;
+        }
     }
     &-9{
-        background: white;
         bottom: 0;
         height: 100px;
         position: absolute;
         width: 120px;
         z-index: 9;
+        &__left-cloud{
+            background: white;
+            border-radius: 40px 40px 0 0;
+            display: inline-block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            width: 80px;
+        }
+        &__right-cloud{
+            background: white;
+            border-radius: 0 40px 30px 0;
+            bottom: 0;
+            display: inline-block;
+            height: 60%;
+            left: 80px;
+            position: absolute;
+            width: 40px;
+        }
     }
     &-10{
-        background: pink;
         bottom: 0;
         height: 100px;
         position: absolute;
         right: 0;
         width: 120px;
         z-index: 10;
+        &__left-cloud{
+            background: white;
+            border-radius: 40px 0 0 30px;
+            bottom: 0;
+            display: inline-block;
+            height: 60%;
+            right: 80px;
+            position: absolute;
+            width: 40px;
+        }
+        &__right-cloud{
+            background: white;
+            border-radius: 40px 40px 0 0;
+            display: inline-block;
+            height: 100%;
+            right: 0px;
+            position: absolute;
+            width: 80px;
+        }
     }
 }

@@ -17,13 +17,11 @@ body {
 }
 
 .layer-1 {
-  background: palegoldenrod;
   bottom: 0;
   height: 450px;
   position: absolute;
   right: 60px;
   width: 80px;
-  z-index: 1;
 }
 .layer-1 .left-ear--outer {
   background: white;
@@ -70,7 +68,7 @@ body {
   top: 30px;
   width: 100%;
 }
-.layer-1 .head .head__eye {
+.layer-1 .head__eye {
   background: gray;
   border-radius: 50%;
   width: 4px;
@@ -78,69 +76,305 @@ body {
   position: absolute;
   top: 15px;
 }
-.layer-1 .head .head__eye--left {
+.layer-1 .head__eye--left {
   left: 30px;
 }
-.layer-1 .head .head__eye--right {
+.layer-1 .head__eye--right {
   right: 30px;
 }
 .layer-2 {
-  background: white;
   bottom: 0;
   height: 450px;
   position: absolute;
   left: 60px;
   width: 80px;
   z-index: 2;
+  animation-name: layer;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.layer-2 .left-ear--outer {
+  background: white;
+  border-radius: 90%;
+  top: 0;
+  height: 50px;
+  left: 10px;
+  position: absolute;
+  width: 20px;
+}
+.layer-2 .left-ear--inner {
+  background: pink;
+  border-radius: 90%;
+  top: 8px;
+  height: 50px;
+  left: 15px;
+  position: absolute;
+  width: 10px;
+}
+.layer-2 .right-ear--outer {
+  background: white;
+  border-radius: 90%;
+  top: 0;
+  height: 50px;
+  right: 10px;
+  position: absolute;
+  width: 20px;
+}
+.layer-2 .right-ear--inner {
+  background: pink;
+  border-radius: 90%;
+  top: 8px;
+  height: 50px;
+  right: 15px;
+  position: absolute;
+  width: 10px;
+}
+.layer-2 .head {
+  background: white;
+  border-radius: 50%;
+  height: 80px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 100%;
+}
+.layer-2 .head__eye {
+  background-color: gray;
+  border-radius: 50%;
+  height: 4px;
+  position: absolute;
+  top: 15px;
+  width: 4px;
+  animation-name: blink;
+}
+.layer-2 .head__eye--left {
+  left: 31px;
+}
+.layer-2 .head__eye--right {
+  right: 31px;
 }
 .layer-3 {
-  background: pink;
+  background: #bf624c;
+  border-radius: 20px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   bottom: 0;
   height: 400px;
   left: 0;
   margin: 0 auto;
+  overflow: hidden;
   position: absolute;
   right: 0;
   width: 220px;
   z-index: 3;
 }
+.layer-3 .lawn {
+  background: #51af5e;
+  height: 20px;
+  width: 100%;
+}
+.layer-3 .land {
+  background: linear-gradient(135deg, #51af5e 25%, transparent 25%) -50px 0, linear-gradient(-135deg, #51af5e 25%, transparent 25%) -50px 0, linear-gradient(45deg, #bf624c 25%, transparent 25%), linear-gradient(-45deg, transparent 25%, #a54a38 25%);
+  background-size: 33px 30px;
+  height: 30px;
+  width: 100%;
+}
 .layer-4 {
-  background: white;
   bottom: 0;
   height: 350px;
   left: 15px;
   position: absolute;
   width: 80px;
   z-index: 4;
+  animation-name: layer;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.layer-4 .left-ear--outer {
+  background: white;
+  border-radius: 90%;
+  top: 0;
+  height: 50px;
+  left: 10px;
+  position: absolute;
+  width: 20px;
+}
+.layer-4 .left-ear--inner {
+  background: pink;
+  border-radius: 90%;
+  top: 8px;
+  height: 50px;
+  left: 15px;
+  position: absolute;
+  width: 10px;
+}
+.layer-4 .right-ear--outer {
+  background: white;
+  border-radius: 90%;
+  top: 0;
+  height: 50px;
+  right: 10px;
+  position: absolute;
+  width: 20px;
+}
+.layer-4 .right-ear--inner {
+  background: pink;
+  border-radius: 90%;
+  top: 8px;
+  height: 50px;
+  right: 15px;
+  position: absolute;
+  width: 10px;
+}
+.layer-4 .head {
+  background: white;
+  border-radius: 50%;
+  height: 80px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 100%;
+}
+.layer-4 .head__eye {
+  background-color: gray;
+  border-radius: 50%;
+  height: 4px;
+  position: absolute;
+  top: 15px;
+  width: 4px;
+  animation-name: blink;
+}
+.layer-4 .head__eye--left {
+  left: 31px;
+}
+.layer-4 .head__eye--right {
+  right: 31px;
 }
 .layer-5 {
-  background: papayawhip;
+  background: #bf624c;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
   bottom: 0;
   height: 300px;
+  overflow: hidden;
   position: absolute;
   width: 200px;
   z-index: 5;
 }
+.layer-5 .lawn {
+  background: #51af5e;
+  height: 20px;
+  width: 100%;
+}
+.layer-5 .land {
+  background: linear-gradient(135deg, #51af5e 25%, transparent 25%) -50px 0, linear-gradient(-135deg, #51af5e 25%, transparent 25%) -50px 0, linear-gradient(45deg, #bf624c 25%, transparent 25%), linear-gradient(-45deg, transparent 25%, #a54a38 25%);
+  background-size: 33px 30px;
+  height: 30px;
+  width: 100%;
+}
 .layer-6 {
-  background: white;
   bottom: 0;
   height: 250px;
   position: absolute;
   right: 30px;
   width: 80px;
   z-index: 6;
+  animation-name: layer;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.layer-6 .left-ear--outer {
+  background: white;
+  border-radius: 90%;
+  top: 0;
+  height: 50px;
+  left: 10px;
+  position: absolute;
+  width: 20px;
+}
+.layer-6 .left-ear--inner {
+  background: pink;
+  border-radius: 90%;
+  top: 8px;
+  height: 50px;
+  left: 15px;
+  position: absolute;
+  width: 10px;
+}
+.layer-6 .right-ear--outer {
+  background: white;
+  border-radius: 90%;
+  top: 0;
+  height: 50px;
+  right: 10px;
+  position: absolute;
+  width: 20px;
+}
+.layer-6 .right-ear--inner {
+  background: pink;
+  border-radius: 90%;
+  top: 8px;
+  height: 50px;
+  right: 15px;
+  position: absolute;
+  width: 10px;
+}
+.layer-6 .head {
+  background: white;
+  border-radius: 50%;
+  height: 80px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 100%;
+}
+.layer-6 .head__eye {
+  background-color: gray;
+  border-radius: 50%;
+  height: 4px;
+  position: absolute;
+  top: 15px;
+  width: 4px;
+  animation-name: blink;
+}
+.layer-6 .head__eye--left {
+  left: 31px;
+}
+.layer-6 .head__eye--right {
+  right: 31px;
 }
 .layer-7 {
-  background: pink;
+  background: #bf624c;
+  border-radius: 20px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
   bottom: 0;
   height: 200px;
+  overflow: hidden;
   position: absolute;
   right: 0;
   width: 150px;
   z-index: 7;
 }
+.layer-7 .lawn {
+  background: #51af5e;
+  height: 20px;
+  width: 100%;
+}
+.layer-7 .land {
+  background: linear-gradient(135deg, #51af5e 25%, transparent 25%) -50px 0, linear-gradient(-135deg, #51af5e 25%, transparent 25%) -50px 0, linear-gradient(45deg, #bf624c 25%, transparent 25%), linear-gradient(-45deg, transparent 25%, #a54a38 25%);
+  background-size: 33px 30px;
+  height: 30px;
+  width: 100%;
+}
 .layer-8 {
-  background: papayawhip;
   bottom: 0;
   height: 120px;
   left: 0;
@@ -150,20 +384,86 @@ body {
   width: 200px;
   z-index: 8;
 }
+.layer-8__left-lawn {
+  background: #51af5e;
+  border-radius: 40px 40px 0 0;
+  bottom: 0;
+  display: inline-block;
+  height: 70%;
+  left: 0;
+  position: absolute;
+  width: 80px;
+}
+.layer-8__center-lawn {
+  background: #51af5e;
+  border-radius: 40px 40px 0 0;
+  bottom: 0;
+  display: inline-block;
+  height: 100%;
+  left: 60px;
+  position: absolute;
+  width: 80px;
+}
+.layer-8__right-lawn {
+  background: #51af5e;
+  border-radius: 40px 40px 0 0;
+  bottom: 0;
+  display: inline-block;
+  height: 80%;
+  left: 130px;
+  position: absolute;
+  width: 80px;
+}
 .layer-9 {
-  background: white;
   bottom: 0;
   height: 100px;
   position: absolute;
   width: 120px;
   z-index: 9;
 }
+.layer-9__left-cloud {
+  background: white;
+  border-radius: 40px 40px 0 0;
+  display: inline-block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 80px;
+}
+.layer-9__right-cloud {
+  background: white;
+  border-radius: 0 40px 30px 0;
+  bottom: 0;
+  display: inline-block;
+  height: 60%;
+  left: 80px;
+  position: absolute;
+  width: 40px;
+}
 .layer-10 {
-  background: pink;
   bottom: 0;
   height: 100px;
   position: absolute;
   right: 0;
   width: 120px;
   z-index: 10;
+}
+.layer-10__left-cloud {
+  background: white;
+  border-radius: 40px 0 0 30px;
+  bottom: 0;
+  display: inline-block;
+  height: 60%;
+  right: 80px;
+  position: absolute;
+  width: 40px;
+}
+.layer-10__right-cloud {
+  background: white;
+  border-radius: 40px 40px 0 0;
+  display: inline-block;
+  height: 100%;
+  right: 0px;
+  position: absolute;
+  width: 80px;
 }/*# sourceMappingURL=contexto-de-apilamiento.css.map */

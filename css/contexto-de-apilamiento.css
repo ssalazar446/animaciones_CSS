@@ -466,4 +466,18 @@ body {
   right: 0px;
   position: absolute;
   width: 80px;
+}
+
+@keyframes blink {
+  0% {
+    height: 4px;
+  }
+  5% {
+    height: 1px;
+    transform: translate(0px, 2px);
+  }
+  10% {
+    height: 4px;
+    transform: translate(0px, 2px);
+  }
 }/*# sourceMappingURL=contexto-de-apilamiento.css.map */

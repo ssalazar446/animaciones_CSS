@@ -473,3 +473,17 @@ body{
         }
     }
 }
+
+@keyframes blink {
+    0% {
+        height: 4px;
+    }
+    5% {
+        transform: translate(0px, 2px);
+        height: 1px;
+    }
+    10% {
+        transform: translate(0px, 2px);
+        height: 4px;
+    }
+}
